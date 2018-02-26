@@ -21,7 +21,7 @@ string interface::chercherCondiment(int index) {
 interface::interface(){
 	positionecran = 0;
 	selectionecran();
-}
+}   //test
 
 interface::~interface()
 {
