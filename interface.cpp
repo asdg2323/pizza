@@ -42,32 +42,33 @@ void interface::selectionecran()
 
 void interface::ecrandacceuil() {
 
-	char a;
+	int entree;
 
 	printf("\n");
 	printf("------------------------------------------------------\n");
-	printf("Bienvenue chez Uberto pizza (Appuyer sur 'n' pour continuer \n");
+	printf("Bienvenue chez Uberto pizza (Appuyer sur 'n' pour continuer) \n");
 	printf("------------------------------------------------------\n");
 	printf("\n");
 	printf("appuyer sur 'n' pour demarrer votre commade\n");
 	printf("appuyer sur 'x' pour quitter le programme\n");
+	while (1) {
+		entree = _getch();
+		switch (entree) {
+		case 'n':
 
-	cin >> a;
-	switch (a) {
-	case 'n':
 
+			system("cls");
+			positionecran = 1;
+			selectionecran();
+			break;
 
-		system("cls");
-		positionecran = 1;
-		selectionecran();
-		break;
+		case 'x':
 
-	case 'x':
+			cout << "je quitte";
+			exit(EXIT_SUCCESS);
+			break;
 
-		cout << "je quitte";
-		exit(EXIT_SUCCESS);
-		break;
-
+		}
 	}
 }
 
